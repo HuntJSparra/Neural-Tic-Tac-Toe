@@ -6,37 +6,55 @@ e|e|e
 
 e|e|e
 -----
-e|e|X
------
 e|e|e
+-----
+e|e|O
 
-e|e|e
------
-e|O|X
+e|X|e
 -----
 e|e|e
+-----
+e|e|O
 
-e|e|e
+e|X|e
 -----
-X|O|X
+O|e|e
 -----
-e|e|e
+e|e|O
 
-e|e|e
+X|X|e
 -----
-X|O|X
+O|e|e
 -----
-e|O|e
+e|e|O
 
-e|e|e
+X|X|e
 -----
-X|O|X
+O|e|e
 -----
-e|O|X
+O|e|O
 
-e|O|e
+X|X|e
 -----
-X|O|X
+O|e|e
 -----
-e|O|X
+O|X|O
+
+X|X|e
+-----
+O|O|e
+-----
+O|X|O
+
+X|X|e
+-----
+O|O|X
+-----
+O|X|O
+
+X|X|O
+-----
+O|O|X
+-----
+O|X|O
 

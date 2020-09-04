@@ -4,7 +4,7 @@ import hjs.nnpackage.pairs.*;
 import hjs.nnpackage.network.Neuron;
 import hjs.nnpackage.network.NeuralNetwork;
 
-import hjs.nnpackage.learning.TemporalDifference;
+import hjs.nnpackage.learning.BatchBackpropagation;
 
 //java
 import java.lang.Thread;
@@ -26,7 +26,7 @@ class TicTacToe {
 	static int matchNumber;
 
 	static NeuralNetwork nn;
-	static TemporalDifference td;
+	static BatchBackpropagation td;
 
 	static boolean humanPlayer;
 
@@ -133,8 +133,8 @@ class TicTacToe {
 		Player currentPlayer = p1;
 
 		ErrorDerivativePair edp = new SquareEuclideanDistance();
-		TemporalDifference tdp1 = new TemporalDifference(TicTacToe.nn, edp);
-		TemporalDifference tdp2 = new TemporalDifference(TicTacToe.nn, edp);
+		BatchBackpropagation tdp1 = new BatchBackpropagation(TicTacToe.nn, edp);
+		BatchBackpropagation tdp2 = new BatchBackpropagation(TicTacToe.nn, edp);
 
 		while (game.checkWin() == 'e' && TicTacToe.exit == false) {
 			System.out.println(game.boardToString()+'\n');
@@ -156,8 +156,8 @@ class TicTacToe {
 			gameRecording += game.boardToString()+'\n';
 
 		char winner = game.checkWin();
-		tdp1.backpropagate(new double[] {(winner == 'N' ? 0.5 : (winner == p1.getSymbol() ? 1 : 0))}, 0.001);
-		tdp2.backpropagate(new double[] {(winner == 'N' ? 0.5 : (winner == p2.getSymbol() ? 1 : 0))}, 0.001);
+		tdp1.backpropagateDiscount(new double[] {(winner == 'N' ? 0.5 : (winner == p1.getSymbol() ? 1 : 0))}, 0.001, 1);
+		tdp2.backpropagateDiscount(new double[] {(winner == 'N' ? 0.5 : (winner == p2.getSymbol() ? 1 : 0))}, 0.001, 1);
 
 		if (TicTacToe.matchNumber%1000 == 1) {
 			System.out.println("Recording");

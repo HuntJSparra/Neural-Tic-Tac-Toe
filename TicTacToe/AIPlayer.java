@@ -32,7 +32,7 @@ class AIPlayer implements Player {
 				board[row][column] = this.symbol;
 				this.nn.update(generateInput(board));
 				tempValue = nn.getOutput()[0];
-				tempValue += r.nextFloat()*0.2;
+				tempValue += r.nextFloat()*0.1;
 
 				if (tempValue > bestValue) {
 					bestValue = tempValue;

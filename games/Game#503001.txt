@@ -4,45 +4,45 @@ e|e|e
 -----
 e|e|e
 
-X|e|e
------
 e|e|e
------
-e|e|e
-
-X|e|e
 -----
 e|O|e
 -----
 e|e|e
 
-X|e|e
------
-X|O|e
------
 e|e|e
-
-X|e|e
------
-X|O|e
 -----
 e|O|e
-
-X|X|e
 -----
-X|O|e
+e|X|e
+
+e|e|e
 -----
 e|O|e
+-----
+O|X|e
 
-X|X|O
+e|e|e
 -----
-X|O|e
+e|O|X
 -----
+O|X|e
+
 e|O|e
+-----
+e|O|X
+-----
+O|X|e
 
-X|X|O
+e|O|e
 -----
-X|O|e
+e|O|X
 -----
-X|O|e
+O|X|X
+
+e|O|O
+-----
+e|O|X
+-----
+O|X|X
 
